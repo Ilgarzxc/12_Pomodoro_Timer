@@ -10,7 +10,7 @@
   <body>
 
     <div class="container">
-      <h1 class="title">Pomodoro Timer</h1>
+      <h1 class="title" aria-label="Pomodoro Timer">Pomodoro Timer</h1>
       <p class="sessionid" id="sessionid">Session №1</p>
       <hr>
 
@@ -19,13 +19,13 @@
       <p id="modeLabel" class="mode-label">Work</p>
 
       <div class="button-wrapper">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <button id="reset">Reset</button>
-        <button id="settings" class="settings-button">⚙️ Settings</button>
+        <button id="start" aria-label="Start timer">Start</button>
+        <button id="stop" aria-label="Stop timer">Stop</button>
+        <button id="reset" aria-label="Reset timer">Reset</button>
+        <button id="settings" class="settings-button" aria-label="Open settings">⚙️ Settings</button>
       </div>
     </div>
-    <div id="settingsModal" class="modal">
+    <div id="settingsModal" class="modal" role="dialog" aria-modal="true">
       <div class="modal-content">
         <h2>Settings</h2>
 

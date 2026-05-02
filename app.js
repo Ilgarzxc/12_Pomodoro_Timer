@@ -4,6 +4,12 @@ const stop = document.getElementById("stop");
 const reset = document.getElementById("reset");
 const timer = document.getElementById("timer");
 
+// session end signal
+const workSound = new Audio("sounds/work.mp3");
+const shortBreakSound = new Audio("sounds/pause.mp3");
+const longBreakSound = new Audio("sounds/longbreak.mp3");
+
+
 //default variables for segment durations
 let workDuration = 25;
 let shortBreak = 5;
@@ -77,15 +83,21 @@ const switchMode = () => {
         //defining what kind of break will happen next
         if (workSessionCount % sessionsBeforeLong === 0) {
             mode = 'longBreak';
+            longBreakSound.currentTime = 0;
+            longBreakSound.play();
             timeLeft = longBreak * 60;
         } else {
             mode = 'shortBreak';
+            shortBreakSound.currentTime = 0;
+            shortBreakSound.play();
             timeLeft = shortBreak * 60;
         }
     }
     else {
         // break completed - start a new working session
         mode = "work";
+        workSound.currentTime = 0;
+        workSound.play(); // sound of new work session
         timeLeft = workDuration * 60;
     }
     updateModeLabel();

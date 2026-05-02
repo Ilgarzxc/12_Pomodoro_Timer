@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
     background: linear-gradient(
     -135deg,
-    rgb(39, 28, 243),#ec2f12);
+    rgb(216, 190, 216),#3ffcf3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 2em;
-    color: white;
+    color: #333;
     background-color: rgba(255, 255, 255, 0.20);
     border-radius: 2em;
     padding: 4em 3em;
@@ -33,7 +33,7 @@ body{
 }
 hr{
     width: 100%;
-    background-color: white;
+    background-color: grey;
     height: 5px;
     border-radius: 1em;
     border: none;
@@ -75,6 +75,10 @@ button{
 }
 button:hover{
     transform: translateY(-10px);
+}
+button:focus{
+    outline: 3px solid #000;
+    outline-offset: 3px;
 }
 .settings-button{
     font-size: 1.2em;
@@ -131,4 +135,41 @@ button:hover{
 }
 #reset{
     background-color: blue;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 2em 1.5em;
+        gap: 1.5em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .sessionid {
+        font-size: 1.4em;
+    }
+
+    .mode-label {
+        font-size: 1.4em;
+    }
+
+    .timer {
+        font-size: 2.5em;
+    }
+
+    button {
+        font-size: 1.4em;
+        padding: 0.4em 0.6em;
+    }
+
+    .settings-button {
+        font-size: 1em;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 1.5em;
+    }
 }
