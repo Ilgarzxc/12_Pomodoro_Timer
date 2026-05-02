@@ -16,17 +16,34 @@
 
       
       <p class="timer" id="timer">25:00</p>
+      <p id="modeLabel" class="mode-label">Work</p>
 
       <div class="button-wrapper">
         <button id="start">Start</button>
         <button id="stop">Stop</button>
         <button id="reset">Reset</button>
-        <div class="settings-button">
-          <button id="settings">⚙️ Settings</button>
-        </div>
+        <button id="settings" class="settings-button">⚙️ Settings</button>
       </div>
     </div>
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <h2>Settings</h2>
 
+        <label>Work duration (minutes):</label>
+        <input type="number" id="workDuration">
+
+        <label>Short break(minutes):</label>
+        <input type="number" id="shortBreak">
+
+        <label>Long break(minutes):</label>
+        <input type="number" id="longBreak">
+
+        <label>Sessions before long break:</label>
+        <input type="number" id="sessionsCount">
+
+        <button id="saveSettings">Save</button>
+      </div>
+    </div>
     
     <script src="app.js"></script>
   </body>
