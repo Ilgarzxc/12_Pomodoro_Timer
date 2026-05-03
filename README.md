@@ -1,6 +1,9 @@
 ## Project URL
 https://roadmap.sh/projects/pomodoro-timer
 
+## Link to the deployed web application:
+https://vergunka.work/pomodoro/index.html
+
 ## Pomodoro Timer
 A lightweight browser-based Pomodoro timer built with HTML, CSS, and JavaScript.
 
